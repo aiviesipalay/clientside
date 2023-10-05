@@ -23,7 +23,7 @@ export default function AddStore() {
   const cancelButtonRef = useRef(null);
 
   const addProduct = () => {
-    fetch("https://server-wi02.onrender.com/api/store/add", {
+    fetch("http://localhost:4000/api/store/add", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

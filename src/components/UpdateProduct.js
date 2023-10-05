@@ -22,7 +22,7 @@ export default function UpdateProduct({
   };
 
   const updateProduct = () => {
-    fetch("https://server-wi02.onrender.com/api/product/update", {
+    fetch("http://localhost:4000/api/product/update", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
