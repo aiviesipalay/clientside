@@ -89,6 +89,7 @@ function Dashboard() {
     fetchStoresData();
     fetchProductsData();
     fetchMonthlySalesData();
+    
   }, []);
 
   // Fetching total sales amount
@@ -126,7 +127,7 @@ function Dashboard() {
 
   // Fetching Monthly Sales
   const fetchMonthlySalesData = () => {
-    fetch(`http://localhost:4000/api/sales/getmonthly`)
+    fetch(`https://server-wi02.onrender.com/api/sales/getmonthly`)
       .then((response) => response.json())
       .then((datas) => updateChartData(datas.salesAmount))
       .catch((err) => console.log(err));
@@ -275,7 +276,7 @@ function Dashboard() {
             </p>
           </div>
         </article>
-        <div className="flex justify-around bg-white rounded-lg py-8 col-span-full justify-center">
+        <div className="flex  bg-white rounded-lg py-8 col-span-full justify-center">
           <div>
             <Chart
               options={chart.options}
